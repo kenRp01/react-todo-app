@@ -1,8 +1,8 @@
-import { Task } from "../types";
-import axios from "axios";
-import useStore from "../store";
-import { useError } from "./useError";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import axios from 'axios'
+import { useQueryClient, useMutation } from '@tanstack/react-query'
+import { Task } from '../types'
+import useStore from '../store'
+import { useError } from '../hooks/useError'
 
 export const useMutateTask = () => {
     const queryClient = useQueryClient()
@@ -17,7 +17,7 @@ export const useMutateTask = () => {
             onSuccess: (res) => {
                 const previousTasks = queryClient.getQueryData<Task[]>(['tasks'])
                 if (previousTasks) {
-                    queryClient.setQueriesData(['tasks'], [...previousTasks, res.data])
+                    queryClient.setQueryData(['tasks'], [...previousTasks, res.data])
                 }
                 resetEditedTask()
             },
