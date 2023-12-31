@@ -22,6 +22,6 @@ export const useQueryTasks = () => {
             } else {
                 switchErrorHandling(err.response.data)
             }
-        }
+        },
     })
 }

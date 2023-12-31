@@ -22,10 +22,11 @@ export const Auth = () => {
                 password: pw
             })
             .then(() =>
-            loginMutation.mutate({
-                email: email,
-                password: pw
-            }))
+                loginMutation.mutate({
+                    email: email,
+                    password: pw
+                })
+            )
         }
     }
   return (

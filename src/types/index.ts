@@ -3,13 +3,11 @@ export type Task = {
     title: string
     created_at: Date
     updated_at: Date
-}
-
-export type CsrfToken = {
+  }
+  export type CsrfToken = {
     csrf_token: string
-}
-
-export type Credential = {
+  }
+  export type Credential = {
     email: string
     password: string
-}
+  }
