@@ -27,7 +27,7 @@ export const useError = () => {
                 break
             case 'missing or malformed jwt':
                 alert('access token is not valid, please login')
-               resetEditedTask()
+                resetEditedTask()
                 navigate('/')
                 break
             case 'duplicated key not allowed':
